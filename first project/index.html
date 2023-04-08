@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e4063397f6.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li class="first_nav">museo Sans</li>
+        <li class="secound_nav">collections</li>
+        <li class="third_nav">our mission</li>
+        <li class="fourth_nav">event</li>
+        <li class="fifth_nav">contact now</li>
+      </ul>
+      <div class="menu">menu</div>
+    </div>
+
+    <div class="menu-content" style="display: none">
+      <div class="exit">
+        <i class="fa-solid fa-xmark fa-2xl" style="color: #191c19"></i>
+      </div>
+      <ul>
+        <li class="menu_secound_nav">collections</li>
+        <li class="menu_third_nav">our mission</li>
+        <li class="menu_fourth_nav">event</li>
+        <li class="menu_fifth_nav">contact now</li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <div class="left-header">CONGREVE STREET</div>
+        <h2 class="left-paragraph">Birmingham <u>Museums</u>.</h2>
+        <div class="fill">
+          <img
+            src="./birmingham-museums-trust-Cv0k6jv3-Vo-unsplash-800x0-c-default.jpg"
+            alt="" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="top">
+          <div class="top-container">
+            <div class="top-header">EUROPENA</div>
+            <h1 class="top-header2">A Woman Slicing <u>Bread</u>.</h1>
+            <div class="top-paragraph">
+              Date: 1800 INSTITION RIJKSMUSEM PROVIDER: RIJKSMUSEM PROVIDER
+              COUNTRY: NETHRLANDS PUBLIC DOMAIN PHOTO BY EUROPENA
+            </div>
+          </div>
+          <div class="fill2">
+            <img src="./europeana-X3uaMNNqa1Y-unsplash.jpg" alt="" />
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="bottom-left">
+            <div class="fill3">
+              <img
+                src="./Jan_Verspronck_-_Portret_van_Adriana_Croes,_1644.jpg"
+                alt="" />
+            </div>
+            <h1 class="bottom-left-title">portrait</h1>
+            <p class="bottom-left-paragraph">
+              PORTRAIT OF MARITGE CLAESOR VOOGHT. DATE: 1639.
+              INSTITUTION:RIJKSMUSEM PROVIDER: RIJKSMUSEM. PROVIDER COUNTRY:
+              NETHRLANDS PUBLIC DOMAIN
+            </p>
+          </div>
+          <div class="bottom-right">
+            <div class="bottom-right-container">
+              <h4 class="bottom-right-header">EUROPENA</h4>
+              <div class="fill4">
+                <img src="./download.jpeg" alt="" />
+              </div>
+            </div>
+            <h1 class="bottom-right-header2">vintage <u>painting</u>,</h1>
+            <p class="bottom-right-paragraph">
+              PORTRAIT OF A MAN DATE: 1648, INSTITUTION:RIJKSMUSEM
+              ,PROVIDER:RIJKSMUSEM. PROVIDER COUNTRY: NETHRLANDS PUBLIC DOMAIN
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menu = document.querySelector(".menu");
+      const exit = document.querySelector(".exit");
+      const menuContent = document.querySelector(".menu-content");
+
+      menu.addEventListener("click", () => {
+        menuContent.style.display = "block";
+        menuContent.classList.add("slide-in");
+      });
+
+      exit.addEventListener("click", () => {
+        menuContent.classList.remove("slide-in");
+        menuContent.classList.add("slide-out");
+        setTimeout(() => {
+          menuContent.style.display = "none";
+          menuContent.classList.remove("slide-out");
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
